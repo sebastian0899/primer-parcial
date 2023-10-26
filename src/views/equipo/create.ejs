@@ -1,0 +1,53 @@
+<%- include('../layouts/header',{title:'create a new eqipo'}); -%>
+    <div class="container">
+        <div class="row">
+            <div class="col-12"></div>
+            <h1  class="alert alert-success text-center">Create a new equipo</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+           <form action="/formula" method="post" class="row">
+            <div class="col-6">
+                <label for="name" class="form-label">name</label>
+                <input type="text" name="name" id="name" class="form-control" required>
+            </div>
+            <div class="col-6">
+                <label for="pilot" class="form-label">pilot</label>
+                <input type="text" name="pilot" id="pilot" class="form-control" required>
+            </div>
+            <div class="col-6">
+                <label for="TechnicalManager" class="form-label">Technical Manager</label>
+                <input type="text" name="TechnicalManager" id="TechnicalManager" class="form-control" required>
+            </div>
+            <div class="col-6">
+                <label for="Firstseason" class="form-label">First season</label>
+                <input type="number" name="Firstseason" id="Firstseason" class="form-control" required>
+            </div>
+            <div class="col-6">
+                <label for="Championships" class="form-label">Championships</label>
+                <input type="number" name="Championships" id="Championships" class="form-control" required>
+            </div>
+            <div class="col-6">
+                <label for="Chassis" class="form-label">Chassis</label>
+                <input type="text" name="Chassis" id="Chassis" class="form-control" required>
+            </div>
+            <div class="col-6">
+                <label for="tires" class="form-label">tires</label>
+                <input type="text" name="tires" id="tires" class="form-control" required>
+            </div>
+            <div class="col-12 d-dgrid mt-4">
+                <button type="submit" class="btn-outline-success">create</button>
+            </div>
+          
+        </form>
+       </div>
+
+    <div class="row">
+        <div class="col-12 d-grid mt-4" >
+            <a href="/formula" class="btn btn-outline-secondary">Regresar a la lista de equipos</a>
+        </div>
+    </div>
+    </div>
+   
+    <%- include('../layouts/footer'); -%>

@@ -1,0 +1,64 @@
+<%- include('../layouts/header',{title:'create a new pet'}); -%>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12"></div>
+            <h1  class="alert alert-success text-center">Pets list</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">pilot</th>
+                    <th scope="col">Technical Manager</th>
+                    <th scope="col">First season</th>
+                    <th scope="col">Championships</th>
+                    <th scope="col">Chassis</th>
+                    <th scope="col">Tires</th>
+                    <th scope="col">delete</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    
+                        <% formula.map(formu =>{ %>
+                            <tr>
+                                <th scope="row"><%= formu.id%></th>
+                                <td><%= formu.name%></td>
+                                <td><%=formu.pilot%></td>
+                                <td><%=formu.Technical_Manager%></td>
+                                <td><%= formu.First_season%> </td>
+                                <td><%= formu.Championships%> </td>
+                                <td><%= formu.Chassis%> </td>
+                                <td><%= formu.Tires%> </td>
+                                <td>
+                                    <form 
+                                    action="/formula/delete/<%= formu.id %>" 
+                                    method="post" 
+                                    onsubmit="return confirm('are you sure you wnat to delete this equipo?')">
+                                      <button type="submit" class="btn btn-outline-danger">delete</button>
+                                    </form>
+                                </td>
+                              </tr>
+                            
+                        
+                
+                    <%  }) %>
+                
+                         
+                    
+                </tbody>
+              </table>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-12 d-dgrid">
+            <a href="/pets/create" class="btn btn-outline-secondary"> create a new pet</a>
+        </div>
+    </div>
+    <%- include('../layouts/footer'); -%>

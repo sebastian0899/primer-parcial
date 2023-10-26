@@ -1,0 +1,1 @@
+Wed Oct 25 2023 21:51:05 GMT-0500 (hora estándar de Colombia) GET listar equipos /api/formula
